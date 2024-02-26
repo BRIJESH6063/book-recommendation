@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <script src="script.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="side-nav">
+            <div class="welcome">
+                <img src="static/images/welcome.png" alt="welcome" class="welcome-img">
+                <div class="content">
+                    <h2>brijesh kumar</h2>
+                    <p>ml learner</p>
+                </div>
+            </div>
+            <ul>
+                <li><img src="static/images/about.png" alt="about"><p onclick="window.location.href='/about'">AboutProject</p></li>
+                <li><img src="static/images/study-material.png" alt="study-mat"><p onclick="window.location.href='/material'">StudyMaterial</p></li>
+                <li><img src="static/images/imageGitHub.png" alt="github"><p onclick="window.location.href='https://github.com/BRIJESH6063/book-recommendation';" >GithubCode</p></li>
+                <li><img src="static/images/linkedin.png" alt="linkedin"><p onclick="window.location.href='https://www.linkedin.com/in/brijesh6063/';" >LinkedinProfile</p></li>
+
+            </ul>
+            <ul>
+                <li><img src="static/images/copyright.png" alt="copyright"><p>copyright</p></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!------------------------------------------   form page    -------------------------------------------------->
+  <div class="container">
+    <header>Book Recommendation System</header>
+
+    <form action="{{url_for('predict')}}" method="POST">
+        <div class="details personal">
+            <span class="title">Input details for book recommendation</span>
+
+            <div class="fields">
+                <div class="input-field">
+                    <label for="">The name of book you just read</label>
+                    <input type="text" placeholder="book name" name="book_name" required>
+                </div>
+                
+            </div>
+
+            <div class="fields">
+                <div class="input-field">
+                    <label for="">Number of recommendations required</label>
+                    <input type="text" placeholder="no of recommendations" name="no_of_rec" required>
+                </div>
+                
+            </div>
+
+        </div>
+
+        
+        <button class="nextBtn" type="submit" value="Submit">
+            <span class="btnText">Predict</span>
+            <i class="uil uil-navigator"></i>
+        </button>
+        
+    </form>
+  </div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
